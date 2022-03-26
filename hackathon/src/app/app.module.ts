@@ -12,6 +12,9 @@ import { ResidenceComponent } from './residence/residence.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { RequestsResidenceComponent } from './requests-residence/requests-residence.component';
 import { AddResidencesComponent } from './add-residences/add-residences.component';
+import { ListSyndicsComponent } from './list-syndics/list-syndics.component';
+import { AddSyndicComponent } from './add-syndic/add-syndic.component';
+import { SyndicProfilComponent } from './syndic-profil/syndic-profil.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -22,6 +25,10 @@ const routes: Routes = [
   { path: 'Home_admin', component: AdminHomeComponent },
   { path: 'Request_Residence', component: RequestsResidenceComponent },
   { path: 'Add_Residence', component: AddResidencesComponent },
+  { path: 'List_syndics', component: ListSyndicsComponent },
+  { path: 'Add_syndic', component: AddSyndicComponent },
+  { path: 'SyndicProfil', component: SyndicProfilComponent },
+
 ];
 
 @NgModule({
@@ -36,7 +43,10 @@ const routes: Routes = [
     ResidenceComponent,
     AdminHomeComponent,
     RequestsResidenceComponent,
-    AddResidencesComponent
+    AddResidencesComponent,
+    ListSyndicsComponent,
+    AddSyndicComponent,
+    SyndicProfilComponent
   ],
   imports: [
     BrowserModule,
