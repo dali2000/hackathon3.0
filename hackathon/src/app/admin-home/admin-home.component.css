@@ -1,0 +1,28 @@
+.content {
+  margin-left: 19%;
+  margin-top: 5%;
+}
+.box {
+  border-radius: 5px;
+  padding: 0;
+
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.267);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.267);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.267);
+  background-color: white;
+  padding: 20px;
+  font-size: 2rem;
+}
+.add{
+    float: right;
+    border:2px solid #D24C51;
+    background-color: #F6F6F6;
+    color: #D24C51;
+    margin-left: 16px;
+}
+.add:hover{
+    
+    border:2px solid #D24C51;
+    background-color: #D24C51;
+    color: white;
+}
