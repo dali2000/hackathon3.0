@@ -1,0 +1,63 @@
+<div [ngClass]="{'sidebar':true,'active':check}" style="z-index: 1000;">
+    <div class="log_content">
+        <div class="logo">
+            
+            <div class="logo_name"><img src="../assets/img/logo.png"></div>
+        </div>
+        <i class='bx bx-menu-alt-left' id="btn" (click)="toggle()"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a routerLink="/profil">
+                
+                <i class='bx bx-building-house' style="color: #D24C51;"></i>
+                <span class="links_name" style="color: #D24C51;">Apartement</span>
+            </a>
+            <span class="tool">Apartement</span>
+        </li>
+
+
+
+        <li>
+            <a routerLink="/updateprofil">
+                
+                <i class='bx bxs-user-detail' style="color: #D24C51"></i>
+                <span class="links_name" style="color: #D24C51;">Resident</span>
+            </a>
+            <span class="tool">Resident</span>
+        </li>
+
+
+        <li>
+            <a routerLink="/Menu/allProductes">
+               
+                <i class='bx bxs-user-rectangle'style="color: #D24C51;"></i>
+                <span class="links_name" style="color: #D24C51">Syndic</span>
+            </a>
+            <span class="tool">Syndic</span>
+        </li>
+       
+       
+        
+
+        
+    </ul>
+    <div class="profile_content" >
+        <div class="profile">
+            <div class="profile_details">
+                <div class="name_job">
+                    <div class="name">{{user.user.lastName}} {{user.user.firstName}}</div>
+                    <div class="job">{{role}}</div>
+                </div>
+            </div>
+            <a (click)="logout()">
+                <i class='bx bx-log-out-circle'id="log_out" style="color: #D24C51"></i>
+                
+               </a>
+        </div>
+    </div>
+</div>
+<div>
+
+    <router-outlet></router-outlet>
+</div>
