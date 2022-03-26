@@ -7,11 +7,18 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { OwnerAcceuilComponent } from './owner-acceuil/owner-acceuil.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ResidenceComponent } from './residence/residence.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
   { path: 'Register', component: RegisterComponent },
-  { path: 'Login', component: LoginComponent }
+  { path: 'Login', component: LoginComponent },
+  { path: 'ouwnerAceuil', component: OwnerAcceuilComponent },
+  { path: 'Residence', component: ResidenceComponent }
+
+
 ];
 
 @NgModule({
@@ -20,7 +27,10 @@ const routes: Routes = [
     WelcomeComponent,
     LoginComponent,
     RegisterComponent,
-    SidebarComponent
+    SidebarComponent,
+    OwnerAcceuilComponent,
+    NavbarComponent,
+    ResidenceComponent
   ],
   imports: [
     BrowserModule,
