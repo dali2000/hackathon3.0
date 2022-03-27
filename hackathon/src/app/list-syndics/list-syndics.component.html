@@ -1,74 +1,38 @@
+<app-sidebar></app-sidebar>
+
 <div class="container content">
     <div class="row">
-        <div class="btn btn-danger add">
+        <div class="btn btn-danger add" routerLink="/Add_syndic">
             <i class='bx bx-plus'></i> Add Syndics
         </div>
     </div>
     <br>
     <h3 style="color:#D24C51">Syndics</h3>
     <br>
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row" >
+        <div class="col-md-4"*ngFor="let res of list;" >
 
             <div class="card" style="width: 18rem;">
                 <div class="dropdown mr-1">
                     <button type="" id="dropdownMenuOffset" data-toggle="dropdown" style="border:none;float: right;">
                         ...
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset"style="float: left;">
-                        <a class="dropdown-item" href="#" style="color: rgb(29, 99, 252)">View</a>
-                        <a class="dropdown-item" href="#" style="color: #D24C51">Delete</a>
-                        <a class="dropdown-item" href="#">Annuler</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="float: left;">
+                        <a class="dropdown-item"  style="color: rgb(29, 99, 252)"  routerLink="/SyndicProfil/{{res._id}}">View</a>
+                      
+                        <a class="dropdown-item" >Annuler</a>
                     </div>
                 </div>
-                <img src="..." class="card-img-top" alt="...">
+                <img [src]="res.user_img"class="card-img-top" alt="..." id="img">
                 <div class="card-body">
-                    <h5 class="card-title">Boff </h5>
-                    <p class="card-text">Role:owner</p>
-
+                    <h5 class="card-title">{{res.lastName}}</h5>
+                    <p class="card-text">Role:{{res.type}}</p>
+                    <p class="card-text">Role:{{res.phone}}</p>
+                    <p class="card-text">Role:{{res.email}}</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        
 
-            <div class="card" style="width: 18rem;">
-                <div class="dropdown mr-1">
-                    <button type="" id="dropdownMenuOffset" data-toggle="dropdown" style="border:none;float: right;">
-                        ...
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                        <a class="dropdown-item" href="#" style="color: rgb(29, 99, 252)">View</a>
-                        <a class="dropdown-item" href="#" style="color: #D24C51">Delete</a>
-                        <a class="dropdown-item" href="#">Annuler</a>
-                    </div>
-                </div>
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Boff </h5>
-                    <p class="card-text">Role:owner</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="dropdown mr-1">
-                    <button type="" id="dropdownMenuOffset" data-toggle="dropdown" style="border:none;float: right;">
-                        ...
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                        <a class="dropdown-item" href="#" style="color: rgb(29, 99, 252)">View</a>
-                        <a class="dropdown-item" href="#" style="color: #D24C51">Delete</a>
-                        <a class="dropdown-item" href="#">Annuler</a>
-                    </div>
-                </div>
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Boff </h5>
-                    <p class="card-text">Role:owner</p>
-
-                </div>
-            </div>
-        </div>
     </div>
 </div>

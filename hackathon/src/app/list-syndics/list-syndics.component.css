@@ -27,4 +27,9 @@
       background-color: #D24C51;
       color: white;
   }
-  
+  #img{
+    flex-shrink: 0;
+    width: 39%;
+    display: block;
+    margin: auto;
+  }

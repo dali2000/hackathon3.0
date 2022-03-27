@@ -1,3 +1,4 @@
+<app-sidebar></app-sidebar>
 <div class="container content">
 
     <br>
@@ -9,42 +10,27 @@
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="text" class="form-control" id="name" placeholder="First name">
+                    <input type="text" class="form-control" id="firstname" placeholder="First name" name="firstName"[(ngModel)]="user.firstName">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="text" class="form-control" id="name" placeholder="Last name">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-
-                    <input type="text" class="form-control" id="name" placeholder="Phone">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-
-                    <input type="email" class="form-control" id="name" placeholder="Email">
+                    <input type="text" class="form-control" id="last_name" placeholder="Last name" name="lastName"[(ngModel)]="user.lastName">
                 </div>
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="text" class="form-control" id="name" placeholder="Cin">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone" name="phone"[(ngModel)]="user.phone">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="Date" class="form-control" id="name" placeholder="Email">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email"[(ngModel)]="user.email">
                 </div>
             </div>
         </div>
@@ -53,7 +39,22 @@
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="password" class="form-control" id="name" placeholder="Password">
+                    <input type="text" class="form-control" id="cin" placeholder="Cin" name="cin" [(ngModel)]="user.cin">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+
+                    <input type="Date" class="form-control" id="name" >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+
+                    <input type="password" class="form-control" id="name" placeholder="Password" name="password" [(ngModel)]="user.password">
                 </div>
             </div>
             <div class="col-md-6">
@@ -64,7 +65,7 @@
             </div>
         </div>
         <div class="row">
-            <input type="button" value="Save" class="btn btn-danger add" data-toggle="modal" data-target="#exampleModal">
+            <input type="button" value="Save" class="btn btn-danger add" data-toggle="modal" data-target="#exampleModal" (click)="addSyndic()">
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

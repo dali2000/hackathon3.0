@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addresidence',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddresidenceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
