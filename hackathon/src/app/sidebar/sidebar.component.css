@@ -151,9 +151,7 @@
 }
 
 .sidebar .profile_content:hover{
-    box-shadow: 10px 10px 5px 0px rgba(193,200,224,0.75);
--webkit-box-shadow: 10px 10px 5px 0px rgba(193,200,224,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(193,200,224,0.75);
+    
 }
 
 .sidebar .profile_content .profile {
