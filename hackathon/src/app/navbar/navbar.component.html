@@ -7,30 +7,39 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto ">
-          
+
             <li class="nav-item">
-               <img src="../assets/img/logo.png" alt="">
+                <img src="../assets/img/logo.png" alt="">
             </li>
-            
-
-           
 
 
 
-            
+
+
+
+
 
         </ul>
 
         <ul class="nav mls-auto">
 
-          
 
-            
+
+
             <li class="nav-item">
                 <a class="nav-link scroll nav2" href="#" id="navc">
-                    <i class='bx bxs-user-circle' ></i>
-                ahmed stambouli
+                    <i class='bx bxs-user-circle'></i>
+                    {{user1.firstName}} {{user1.lastName}}
                 </a>
+            </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+                <button class="nav-link scroll nav2 btn btn-outline-primary" id="navc">
+                    <i class='bx bx-log-out-circle'></i>
+                    <a (click)="logout()" style="color: black;">
+                        Logout
+                    </a>
+                </button>
             </li>
 
 
