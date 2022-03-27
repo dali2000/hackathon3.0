@@ -15,6 +15,9 @@ import { AddResidencesComponent } from './add-residences/add-residences.componen
 import { ListSyndicsComponent } from './list-syndics/list-syndics.component';
 import { AddSyndicComponent } from './add-syndic/add-syndic.component';
 import { SyndicProfilComponent } from './syndic-profil/syndic-profil.component';
+import { AddresidenceComponent } from './addresidence/addresidence.component';
+import { RequestOwnerComponent } from './request-owner/request-owner.component';
+import { ListFactureComponent } from './list-facture/list-facture.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -28,6 +31,11 @@ const routes: Routes = [
   { path: 'List_syndics', component: ListSyndicsComponent },
   { path: 'Add_syndic', component: AddSyndicComponent },
   { path: 'SyndicProfil', component: SyndicProfilComponent },
+  { path: 'Addresidance', component: AddresidenceComponent },
+  { path: 'Request_ouwner', component: RequestOwnerComponent },
+  { path: 'listefacture', component: ListFactureComponent },
+
+
 
 ];
 
@@ -46,7 +54,10 @@ const routes: Routes = [
     AddResidencesComponent,
     ListSyndicsComponent,
     AddSyndicComponent,
-    SyndicProfilComponent
+    SyndicProfilComponent,
+    AddresidenceComponent,
+    RequestOwnerComponent,
+    ListFactureComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,6 @@
     padding: 20px;
     font-size: 2rem;
   }
-  
   .add{
       float: right;
       border:2px solid #D24C51;
@@ -27,4 +26,12 @@
       background-color: #D24C51;
       color: white;
   }
-  
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -10%;
+}
+
