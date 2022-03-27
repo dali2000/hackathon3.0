@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container content">
+    <div class="row">
+        <div class="btn btn-primary" routerLink="/Reclamation" >
+            <i class='bx bx-plus' ></i> add Reclamation
+        </div>
+    </div>
+    <br>
+    <h3 style="color:#5484df">Request List</h3>
+    <br>
+    <div class="row" style="background-color: white;padding:12px;width:99%">
+        <table class="table">
+            <thead style="background-color:#F1F1F1">
+              <tr>
+               <th scope="col">description</th>
+                <th scope="col">date</th>
+                <th scope="col">priority</th>
+                <th scope="col">Type</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let res of reclamation;">
+                <th scope="row">{{res.description}}</th>
+                
+                <td>{{res.date}}</td>
+                <td *ngIf="res.priority==false" > high priority</td>
+                <td *ngIf="res.priority" > low priority</td>
+
+                
+                <td>{{res.status}}</td>
+                
+                <td>
+                    <div class="progress" style="height: 10px; " *ngIf="res.status=='pending'">
+                        <div class="progress-bar"   role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="30"></div>
+                      </div>
+                      <div class="progress" *ngIf="res.status=='in-progress'">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                </td>
+                <td>
+                    
+                    <button class="btn btn-danger" (click)="delete(res._id)">Cancel</button>
+
+                </td>
+              </tr>
+           
+              
+            </tbody>
+          </table>
+
+    </div>
+</div>

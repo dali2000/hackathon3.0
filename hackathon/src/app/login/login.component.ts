@@ -40,10 +40,16 @@ export class LoginComponent implements OnInit {
       else if(this.user1.user.type=="owner"){
         this.router.navigate((['/ouwnerAceuil']))
       }
+      else if((this.user1.user.type=="resident")&&(this.user1.user.status!="active")){
+        this.router.navigate((['/Login']))
+        localStorage.removeItem('token');
+      }
+      else if((this.user1.user.type=="resident")&&(this.user1.user.status=="active")){
+        this.router.navigate((['/acceuilresident']))}
     }
   }
   ngOnInit(): void {
 
   }
-
+  
 }

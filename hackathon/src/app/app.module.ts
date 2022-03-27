@@ -24,6 +24,9 @@ import { ResidentComponent } from './resident/resident.component';
 import { ReclamationComponent } from './reclamation/reclamation.component';
 import { AddOwnerComponent } from './add-owner/add-owner.component';
 import { AddSyndicOwnerComponent } from './add-syndic-owner/add-syndic-owner.component';
+import { ViewReclamationComponent } from './view-reclamation/view-reclamation.component';
+import { ListResidenceComponent } from './list-residence/list-residence.component';
+import { ListResidentComponent } from './list-resident/list-resident.component';
 
 
 const routes: Routes = [
@@ -45,6 +48,10 @@ const routes: Routes = [
   { path: 'Reclamation', component: ReclamationComponent },
   { path: 'addOwner', component: AddOwnerComponent },
   { path: 'addSyndicOwner', component: AddSyndicOwnerComponent },
+  { path: 'viewreclamation', component: ViewReclamationComponent },
+  { path: 'List_residence', component: ListResidenceComponent },
+  { path: 'List_resident', component: ListResidentComponent },
+
 
 
 
@@ -78,7 +85,10 @@ const routes: Routes = [
     ResidentComponent,
     ReclamationComponent,
     AddOwnerComponent,
-    AddSyndicOwnerComponent
+    AddSyndicOwnerComponent,
+    ViewReclamationComponent,
+    ListResidenceComponent,
+    ListResidentComponent
   ],
   imports: [
     BrowserModule,

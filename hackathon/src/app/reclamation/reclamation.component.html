@@ -1,50 +1,56 @@
-<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
 <div class="container content">
 
     <br>
-    <h3 style="color:#D24C51">Request Residence > Add residences</h3>
+    <h3 style="color:#22ADE2;     margin-left: -10%;"> Reclamation</h3>
     <br>
     <form #f="ngForm">
     <div class="form-box">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-<textarea class="form-control"></textarea>
+<textarea class="form-control" placeholder="description" name="description"[(ngModel)]="reclamation.description"></textarea>
                   
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
 
-                    <input type="text" class="form-control" id="name" name="adresse" placeholder="Adresse">
-                </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="pics" [(ngModel)]="reclamation.pics" placeholder>
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+                                  </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-
-                    <input type="text" class="form-control" id="name" placeholder="Owner" name="owner"> 
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="true" name="priority" >
+                        <label class="form-check-label" for="exampleRadios1">
+                          Normal
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="false" name="priority" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Dangerous
+                        </label>
+                      </div>
+                   
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-
-                    <input type="text" class="form-control" id="name" placeholder="Nb departementh" name="NAppartement"  >  
-                </div>
-            </div>
+           
         </div>
+       
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-
-                    <input type="date" class="form-control" id="name" placeholder="Date of instrection" name="date"  >
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-            <input type="button" value="Save" class="btn btn-danger add" data-toggle="modal" data-target="#exampleModal"  >
+            <input type="button" value="send" class="btn btn-danger add" data-toggle="modal" data-target="#exampleModal" (click)="Reclamation()"  >
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,7 +63,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <h3 style="color:#D24C51;text-align: center;">Added successfuly</h3>
+                    <h3 style="color:#22ADE2;text-align: center;">Added successfuly</h3>
                     <br>
                   <img src="../assets/img/CHECK.png" alt="" srcset="" style="margin: auto;width: 100px;  display: block;
                   margin-left: auto;
@@ -70,5 +76,8 @@
     </div>
     
     </form>
+    <div class="btn btn-primary" routerLink="/viewreclamation" >
+        <i class='bx bx-checkbox-minus'></i>  View Reclaamtion 
+    </div>
 
 </div>
