@@ -18,6 +18,9 @@ import { SyndicProfilComponent } from './syndic-profil/syndic-profil.component';
 import { AddresidenceComponent } from './addresidence/addresidence.component';
 import { RequestOwnerComponent } from './request-owner/request-owner.component';
 import { ListFactureComponent } from './list-facture/list-facture.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -61,7 +64,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

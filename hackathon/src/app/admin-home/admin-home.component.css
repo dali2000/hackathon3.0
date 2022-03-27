@@ -26,3 +26,13 @@
     background-color: #D24C51;
     color: white;
 }
+a{
+  text-decoration:none;
+  outline: none;
+  color: #D24C51;
+}
+a:hover{
+  text-decoration:none;
+  outline: none;
+  color: white;
+}
