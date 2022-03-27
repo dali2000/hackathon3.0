@@ -1,48 +1,59 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container">
-   
+
     <div class="login-content">
         <div class="forme">
             <div class="b1">
-                <h3 >Sign Up to</h3>
+                <h3>Sign Up to</h3>
                 <img src="../assets/img/logo.png">
 
-              
-            
+
+
             </div>
-            
 
-            <form >
 
-                
+            <form>
+
+
                 <div class="div">
 
                     <div class="form-floating mb-3">
-                       
-                        <input type="username" class="form-control" id="inp" placeholder="Email" name="email" >
+
+                        <input type="email" class="form-control" id="inp" placeholder="Email" name="email" [(ngModel)]="user.email">
 
                     </div>
                     <div class="form-floating mb-3">
-                        
 
-                        <input type="password" class="form-control" id="inp2" placeholder="password" name="password"  required>
+
+                        <input type="password" class="form-control" id="inp2" placeholder="password" name="password"
+                            required [(ngModel)]="user.password">
                     </div>
                     <div class="form-floating mb-3">
-                        
 
-                        <input type="password" class="form-control" id="inp3" placeholder=" confirmed password" name="password"  required>
+
+                        <input type="text" class="form-control" id="inp4" placeholder="Ncin" name="cin"
+                            required [(ngModel)]="user.cin">
+                    </div>
+   
+                    <div class="form-floating mb-3">
+
+
+   
                     </div>
                     <a routerLink="/Login">Log In</a>
                 </div>
 
 
-               
-                <button type="submit" class="btn btn-primary">Sign Up</button><br> <br>
-               <b><p>Or</p></b> 
-               <button type="submit" class="btn2"><i class='bx bxl-google'></i> <span class="t1">Continue with google</span></button><br> <br>
 
-                
+                <button type="submit" class="btn btn-primary"(click)="register()">Sign Up</button><br> <br>
+                <b>
+                    <p>Or</p>
+                </b>
+                <button type="submit" class="btn2"><i class='bx bxl-google' ></i> <span class="t1">Continue with
+                        google</span></button><br> <br>
+
+
 
             </form>
         </div>

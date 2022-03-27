@@ -15,6 +15,9 @@ import { AddResidencesComponent } from './add-residences/add-residences.componen
 import { ListSyndicsComponent } from './list-syndics/list-syndics.component';
 import { AddSyndicComponent } from './add-syndic/add-syndic.component';
 import { SyndicProfilComponent } from './syndic-profil/syndic-profil.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -50,7 +53,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
