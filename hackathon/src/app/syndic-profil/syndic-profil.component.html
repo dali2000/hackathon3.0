@@ -1,37 +1,37 @@
+<app-sidebar></app-sidebar>
 <div class="container content">
     <div class="cover">
         <br><br><br><br><br><br>
     </div>
-    <div class="img-profil">
+    <img [src]="syndic.user_img" class="img-profil">
         
-    </div>
     <br><br>
     <div class="row">
         <div class="col-md-8 box" >
         <div class="row">
             <div class="col">
-                <h6>lastName</h6>
+                <h6>lastName:{{syndic.lastName}}</h6>
             </div>
             <div class="col">
-                <h6>FirstName</h6>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <h6>Email</h6>
-            </div>
-            <div class="col">
-                <h6>Phone</h6>
+                <h6>FirstName:{{syndic.firstName}}</h6>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col">
-                <h6>Cin</h6>
+                <h6>Email:{{syndic.email}}</h6>
             </div>
             <div class="col">
-                <h6>Role</h6>
+                <h6>Phone:{{syndic.phone}}</h6>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h6>Cin:{{syndic.cin}}</h6>
+            </div>
+            <div class="col">
+                <h6>Role:{{syndic.type}}</h6>
             </div>
         </div>
         </div>
@@ -39,12 +39,12 @@
             <h6 style="color:#D24C51">Residences</h6>
             <div class="row">
                 <div class="col">
-                    <input type="checkbox" name="" id="">
-                    <span>Nom</span>
+                    <input type="checkbox" name="" id="" checked disabled>
+                    <span>Hanin</span> 
                 </div>
                 <div class="col">
-                    <input type="checkbox" name="" id="">
-                    <span>Nom</span>
+                    <input type="checkbox" name="" id=""  checked disabled>
+                    <span>Amin</span>
                 </div>
             </div>
         </div>

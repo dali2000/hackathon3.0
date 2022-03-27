@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'Add_Residence', component: AddResidencesComponent },
   { path: 'List_syndics', component: ListSyndicsComponent },
   { path: 'Add_syndic', component: AddSyndicComponent },
-  { path: 'SyndicProfil', component: SyndicProfilComponent },
+  { path: 'SyndicProfil/:_id', component: SyndicProfilComponent },
   { path: 'Addresidance', component: AddresidenceComponent },
   { path: 'Request_ouwner', component: RequestOwnerComponent },
   { path: 'listefacture', component: ListFactureComponent },
