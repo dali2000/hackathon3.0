@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ResidentComponent } from './resident/resident.component';
 import { ReclamationComponent } from './reclamation/reclamation.component';
+import { AddOwnerComponent } from './add-owner/add-owner.component';
+import { AddSyndicOwnerComponent } from './add-syndic-owner/add-syndic-owner.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,8 @@ const routes: Routes = [
   { path: 'listefacture', component: ListFactureComponent },
   { path: 'acceuilresident', component: ResidentComponent },
   { path: 'Reclamation', component: ReclamationComponent },
+  { path: 'addOwner', component: AddOwnerComponent },
+  { path: 'addSyndicOwner', component: AddSyndicOwnerComponent },
 
 
 
@@ -72,7 +76,9 @@ const routes: Routes = [
     RequestOwnerComponent,
     ListFactureComponent,
     ResidentComponent,
-    ReclamationComponent
+    ReclamationComponent,
+    AddOwnerComponent,
+    AddSyndicOwnerComponent
   ],
   imports: [
     BrowserModule,
